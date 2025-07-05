@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sociedad Contemporánea</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+<h1>Sociedad Contemporánea</h1>
+<nav> 
+        <ul> 
+        <li><a href="index.html">Inicio</a></li> 
+        <li><a href="autora.html">Sobre la Autora</a></li> 
+        <li><a href="sociedad-contemporanea.html">Sociedad Contemporánea</a></li> 
+        <li><a href="sociedad-informacion.html">Sociedad de la Información</a></li> 
+        <li><a href="sociedad-conocimiento.html">Sociedad del Conocimiento</a></li> 
+    </ul> 
+</nav> 
+</header>
+<main>
+    <p>La sociedad contemporánea se caracteriza por cambios constantes en la tecnología, la cultura y la forma de comunicarnos. El papel de la educación es adaptarse a estas transformaciones, promoviendo el pensamiento crítico, la inclusión digital y la preparación para un mundo en constante evolución.</p>
+</main>
+<footer><p id="fecha-hora"></p></footer>
+<script>
+  function actualizarFechaHora() {
+     const ahora = new Date(); 
+     const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }; 
+     const fecha = ahora.toLocaleDateString('es-EC', opciones); 
+     const hora = ahora.toLocaleTimeString('es-EC'); 
+     document.getElementById("fecha-hora").innerHTML = `Fecha: ${fecha} | Hora: ${hora}`; 
+     } 
+     setInterval(actualizarFechaHora, 1000); 
+     actualizarFechaHora(); 
+     </script>
+</body>
+</html>
